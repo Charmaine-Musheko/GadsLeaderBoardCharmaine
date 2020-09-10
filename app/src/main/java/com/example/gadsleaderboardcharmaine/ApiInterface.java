@@ -7,8 +7,8 @@ import retrofit2.http.GET;
 
 public interface ApiInterface {
     @GET("/api/hours")
-    Call<List<Todo>> getTodo();
+    Call<List<ApiHoursModel>> getApiHoursModel();
 
     @GET("/api/skilliq")
-    Call<List<Todo>> getSkillIq();
+    Call<List<ApiHoursModel>> getSkillIq();
 }

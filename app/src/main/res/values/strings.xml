@@ -2,4 +2,6 @@
     <string name="app_name">LeaderBoard<color>#ffffff</color> </string>
     <string name="learning_hours">Learning Hours</string>
     <string name="learner_name">Learner Name</string>
+    <string name="Country">country_base</string>
+    <string name="Badgeurl">badgeUrl</string>
 </resources>
