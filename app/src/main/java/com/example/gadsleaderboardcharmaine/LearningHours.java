@@ -1,25 +1,25 @@
 package com.example.gadsleaderboardcharmaine;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.jar.Attributes;
+
+import static java.util.jar.Attributes.*;
 
 public class LearningHours extends Fragment {
     View v;
     private RecyclerView myrecyclerview;
-    private List<TopLearnerDetails> listHours;
+    private List<Todo> listHours;
     public LearningHours() {
     }
 
@@ -27,6 +27,10 @@ public class LearningHours extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.learning_hours,container,false);
+        myrecyclerview = (RecyclerView) v.findViewById(R.id.topLearner_recyclingview);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),listHours);
+        myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        myrecyclerview.setAdapter(recyclerViewAdapter);
         return v;
     }
 
@@ -51,5 +55,7 @@ public class LearningHours extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         listHours = new ArrayList<>();
+
+
     }
 }

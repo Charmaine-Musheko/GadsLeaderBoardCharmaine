@@ -9,14 +9,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.gadsleaderboardcharmaine.TopLearnerDetails;
 
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.myViewHolder> {
    Context mContext;
-   List<TopLearnerDetails> mData;
-   public RecyclerViewAdapter(Context mContext, List<TopLearnerDetails> mData){
+   List<Todo> mData;
+   public RecyclerViewAdapter(Context mContext, List<Todo> mData){
        this.mContext = mContext;
        this.mData = mData;
    }

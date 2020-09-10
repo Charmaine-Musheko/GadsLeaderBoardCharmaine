@@ -1,6 +1,8 @@
 package com.example.gadsleaderboardcharmaine;
 
-public class TopLearnerDetails {
+import androidx.annotation.NonNull;
+
+public class Todo {
 
 
 
@@ -8,13 +10,13 @@ public class TopLearnerDetails {
     private String LearningHours= "/api/hours";
     private String SkillIq = "/api/skilliq";
     private int Photo;
-    public TopLearnerDetails() {
+    public Todo(String learner, String l, int learning_hours) {
     }
 
 
 
 
-    public  TopLearnerDetails(String name, String learningHours, String skillIq, int photo){
+    public Todo(String name, String learningHours, String skillIq, int photo){
         Name = name;
         Photo = photo;
         LearningHours = learningHours;
@@ -47,4 +49,10 @@ public class TopLearnerDetails {
         SkillIq = skillIq;
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+
+        return super.toString();
+    }
 }
