@@ -9,6 +9,6 @@ public interface ApiInterface {
     @GET("/api/hours")
     Call<List<Todo>> getTodo();
 
-    @GET("/api/skillIq")
+    @GET("/api/skilliq")
     Call<List<Todo>> getSkillIq();
 }

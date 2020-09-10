@@ -10,12 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.myViewHolder> {
    Context mContext;
-   List<Todo> mData;
-   public RecyclerViewAdapter(Context mContext, List<Todo> mData){
+   ArrayList<Todo> mData;
+   public RecyclerViewAdapter(Context mContext, ArrayList<Todo> mData){
        this.mContext = mContext;
        this.mData = mData;
    }
@@ -31,8 +32,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
     holder.tv_name.setText(mData.get(position).getName());
-    holder.tv_learningHours.setText(mData.get(position).getLearningHours());
-    holder.img.setImageResource(mData.get(position).getPhoto());
+    holder.tv_learningHours.setText(mData.get(position).getMessage);
+    holder.img.setImageResource(mData.get(position).getLive());
     }
 
     @Override

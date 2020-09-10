@@ -1,58 +1,65 @@
 package com.example.gadsleaderboardcharmaine;
 
 import androidx.annotation.NonNull;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Todo {
 
 
+    public class Example {
 
-    private String Name;
-    private String LearningHours= "/api/hours";
-    private String SkillIq = "/api/skilliq";
-    private int Photo;
-    public Todo(String learner, String l, int learning_hours) {
-    }
+        @SerializedName("live")
+        @Expose
+        private Boolean live;
+        @SerializedName("name")
+        @Expose
+        private String name;
+        @SerializedName("message")
+        @Expose
+        private String message;
 
+        /**
+         * No args constructor for use in serialization
+         */
+        public Example() {
+        }
 
+        /**
+         * @param name
+         * @param message
+         * @param live
+         */
+        public Example(Boolean live, String name, String message) {
+            super();
+            this.live = live;
+            this.name = name;
+            this.message = message;
+        }
 
+        public Boolean getLive() {
+            return live;
+        }
 
-    public Todo(String name, String learningHours, String skillIq, int photo){
-        Name = name;
-        Photo = photo;
-        LearningHours = learningHours;
-    }
-    public String getSkillIq() {
-        return SkillIq;
-    }
+        public void setLive(Boolean live) {
+            this.live = live;
+        }
 
-    public String getName() {
-        return Name;
-    }
-    public int getPhoto() {
-        return Photo;
-    }
+        public String getName() {
+            return name;
+        }
 
+        public void setName(String name) {
+            this.name = name;
+        }
 
-    public String getLearningHours() {
-        return LearningHours;
-    }
-    public void setName(String name) {
-        Name = name;
-    }
-    public void setPhoto(int photo) {
-        Photo = photo;
-    }
-    public void setLearningHours(String learningHours) {
-        LearningHours = learningHours;
-    }
-    public void setSkillIq(String skillIq) {
-        SkillIq = skillIq;
-    }
+        public String getMessage() {
+            return message;
+        }
 
-    @NonNull
-    @Override
-    public String toString() {
+        public void setMessage(String message) {
+            this.message = message;
+        }
 
-        return super.toString();
     }
 }
