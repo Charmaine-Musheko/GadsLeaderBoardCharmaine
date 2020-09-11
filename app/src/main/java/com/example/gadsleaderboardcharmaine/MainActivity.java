@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPagerAdapter adapter;
     private ImageView images;
     private ProgressBar mProgressBar;
-    public static int SPLASH_TIME_OUT;
+    public static int SPLASH_TIME_OUT = 4000;
 
 
 
@@ -64,23 +64,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    new Handler().postDelayed(new Runnable() {
-        @Override
-        public void run() {
-            Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
-            startActivity(homeIntent);
-            finish();
 
-        }
-    },SPLASH_TIME_OUT);
-        onPreExecute();
+     ;
     }
 
-    protected void onPreExecute() {
-        mProgressBar = (android.widget.ProgressBar) findViewById(R.id.progressBar);
-        mProgressBar.setVisibility(View.VISIBLE);
-        mProgressBar.setProgress(1);
-    }
+
 
 }
 
