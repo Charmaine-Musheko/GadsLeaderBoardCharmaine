@@ -5,23 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
 
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout_id"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="@color/colorPrimaryDark"
-        app:tabGravity="fill"
-        app:tabIndicator="@color/colorAccent"
-        app:tabMode="fixed" />
+        <ImageView
+            android:id="@+id/imageViewa"
+            android:layout_width="692dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/images" />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager_id"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout_id"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/colorPrimaryDark"
+            app:tabGravity="fill"
+            app:tabIndicator="@color/colorAccent"
+            app:tabMode="fixed" />
 
-    </androidx.viewpager.widget.ViewPager>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </androidx.viewpager.widget.ViewPager>
 
 </LinearLayout>

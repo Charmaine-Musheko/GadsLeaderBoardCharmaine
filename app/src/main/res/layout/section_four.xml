@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Post"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
@@ -37,6 +38,7 @@
         android:layout_width="170dp"
         android:layout_height="38dp"
         android:background="@color/colorAccent"
+        android:hint="@string/edite_text_jint"
         android:textColorHint="@color/cardview_dark_background"
         app:layout_constraintBottom_toTopOf="@+id/edit_email"
         app:layout_constraintEnd_toStartOf="@+id/edit_lastname"
@@ -48,6 +50,7 @@
     <EditText
         android:id="@+id/edit_lastname"
         android:layout_width="170dp"
+        android:hint="@string/edit_last_name"
         android:layout_height="38dp"
         android:layout_marginEnd="16dp"
         android:background="@color/colorAccent"
@@ -56,13 +59,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.798" />
-    <
+
 
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="384dp"
         android:layout_height="48dp"
         android:background="@color/colorAccent"
+        android:hint="@string/edit_email_hint"
         android:textColorHint="@color/cardview_dark_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/edit_lastname"
@@ -76,6 +80,7 @@
         android:layout_width="384dp"
         android:layout_height="48dp"
         android:layout_marginTop="64dp"
+        android:hint="@string/hint_to_project"
         android:background="@color/colorAccent"
         android:shadowColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="@+id/edit_email"
@@ -83,10 +88,11 @@
         app:layout_constraintStart_toStartOf="@+id/edit_email"
         app:layout_constraintTop_toBottomOf="@+id/edit_email" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/submission_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:text="submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/link_to_project"

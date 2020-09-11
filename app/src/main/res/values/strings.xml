@@ -9,4 +9,8 @@
     <string name="title_activity_my_main">MyMainActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="edite_text_jint">Text Name</string>
+    <string name="edit_last_name">Edit Last Name</string>
+    <string name="edit_email_hint">Edit Email</string>
+    <string name="hint_to_project">Link To Project</string>
 </resources>
