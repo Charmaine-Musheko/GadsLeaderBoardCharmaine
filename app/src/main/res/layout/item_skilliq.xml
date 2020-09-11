@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
     <ImageView
         android:id="@+id/img_content"
         android:layout_width="133dp"
         android:layout_height="108dp"
-        android:src="@drawable/top_learner"
+        android:src="@drawable/skill_iq_trimmed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -29,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/name_learner"
+        android:id="@+id/name_learnera"
         android:layout_width="252dp"
         android:layout_height="32dp"
         android:text="@string/learner_name"
@@ -42,7 +40,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/learning_hoursa"
+        android:id="@+id/learning_hoursb"
         android:layout_width="121dp"
         android:layout_height="36dp"
         android:layout_marginTop="36dp"
@@ -53,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/country"
+        android:id="@+id/countrya"
         android:layout_width="133dp"
         android:layout_height="37dp"
         android:layout_marginTop="4dp"
@@ -64,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/name_learner" />
 
     <TextView
-        android:id="@+id/badge_url"
+        android:id="@+id/badge_urla"
         android:layout_width="269dp"
         android:layout_height="22dp"
         android:layout_marginTop="8dp"
@@ -73,4 +71,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/img_content"
         app:layout_constraintTop_toBottomOf="@+id/learning_hours" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

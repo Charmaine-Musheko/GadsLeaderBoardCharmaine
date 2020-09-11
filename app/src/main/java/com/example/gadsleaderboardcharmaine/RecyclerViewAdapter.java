@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
     holder.tv_name.setText(mData.get(position).getName());
-    holder.tv_learningHours.setImageResource(mData.get(position).getHours());
+    holder.tv_learningHours.setText(String.valueOf(mData.get(position).getHours()));
     holder.tv_country.setText(mData.get(position).getCountry());
     holder.tv_url.setText(mData.get(position).getBadgeUrl());
 
@@ -49,7 +50,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class myViewHolder extends RecyclerView.ViewHolder{
        private TextView tv_name;
-       private ImageView tv_learningHours;
+       private TextView tv_learningHours;
        private TextView  tv_country;
        private TextView tv_url;
        private ImageView img;
@@ -57,7 +58,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_name = (TextView) itemView.findViewById(R.id.name_learner);
-            tv_learningHours = (ImageView) itemView.findViewById(R.id.learning_hours);
+            tv_learningHours = (TextView) itemView.findViewById(R.id.learning_hoursa);
             tv_country = (TextView) (itemView).findViewById(R.id.country);
             tv_url = (TextView) itemView.findViewById(R.id.badge_url);
             img = (ImageView) itemView.findViewById(R.id.img_content);

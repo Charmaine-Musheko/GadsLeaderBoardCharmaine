@@ -1,22 +1,23 @@
 package com.example.gadsleaderboardcharmaine;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.ArrayList;
+import org.w3c.dom.Comment;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -34,22 +35,13 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewpager_id);
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         // Add Fragment here
-        adapter.addFragment(new LearningHours(), "Top Learners");
-        adapter.addFragment(new SkillIq(), "SkillIq");
+        adapter.addFragment(new LearningHours(), getString(R.string.top_learner_title));
+        adapter.addFragment(new SkillIq(), getString(R.string.top_iq_score));
         viewPager.setAdapter(adapter);
         tablayout.setupWithViewPager(viewPager);
-        tablayout.getTabAt(0).setIcon(R.drawable.top_learner);
-        tablayout.getTabAt(1).setIcon(R.drawable.skill_iq_trimmed);
-    }
 
 
 
 
-
-    public void getTodosUsingRouteParameter(View view){
-    }
-    public void getTodoUsingQuery(View view){
-    }
-    public void postTodos(View view){
     }
 }

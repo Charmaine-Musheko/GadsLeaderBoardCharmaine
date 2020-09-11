@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">LeaderBoard<color>#ffffff</color> </string>
+    <string name="app_name">LeaderBoard </string>
     <string name="learning_hours">Learning Hours</string>
     <string name="learner_name">Learner Name</string>
     <string name="Country">country_base</string>
     <string name="Badgeurl">badgeUrl</string>
+    <string name="top_learner_title">Learning Leaders</string>
+    <string name="top_iq_score">Skill IQ Leaders</string>
+    <string name="title_activity_my_main">MyMainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
